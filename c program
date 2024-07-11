@@ -61,6 +61,28 @@ int main() {
    printf("%d",count);
 
 }
+repeated elements in sorted array
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+   int n,search;
+   scanf("%d",&n);
+   
+   int arr[n];
+   for(int i=0;i<n;i++)
+   {
+       scanf("%d",&arr[i]);
+  }
+  
+   for(int i=0;i<n;i++)
+   {
+       if(arr[i]==arr[i+1])
+       {
+           printf("%d",arr[i]);
+       }
+}
+return 0;}
  print the search element index
 #include <stdio.h>
 
