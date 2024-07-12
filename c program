@@ -1,4 +1,4 @@
-reverse tha array
+1.reverse tha array
 #include <stdio.h>
 
 int main() {
@@ -16,7 +16,7 @@ int main() {
 }
     return 0;
 }
-count 0s and 1s
+2.count 0s and 1s
 #include <stdio.h>
 
 int main() {
@@ -39,7 +39,7 @@ int main() {
 
     return 0;
 }
-count less element than key element
+3.count less element than key element
 #include <stdio.h>
 
 int main() {
@@ -62,7 +62,7 @@ int main() {
    printf("%d",count);
 
 }
-repeated elements in sorted array
+4.repeated elements in sorted array
 #include <stdio.h>
 
 int main() {
@@ -84,7 +84,7 @@ int main() {
        }
 }
 return 0;}
- print the search element index
+5. print the search element index
 #include <stdio.h>
 
 int main() {
@@ -109,7 +109,7 @@ int main() {
        printf("-1");
    }
 }
-segregation of 0s and 1s
+6.segregation of 0s and 1s
 #include<stdio.h>  
 int main()  
 {  
@@ -135,7 +135,7 @@ int main()
         printf("%d ", arr[i]);  
     }  
 }  
-sum of right side array
+7.sum of right side array
 #include <stdio.h>
 int main()
 {
@@ -158,6 +158,6 @@ int main()
         printf("%d\t",sum);
         
     }
-    //printf("%d",arr[n-1]);
+    printf("%d",arr[n-1]);
     return 0;
 }
