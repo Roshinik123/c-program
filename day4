@@ -1,0 +1,232 @@
+1.print the string
+#include <stdio.h>
+#include<string.h>
+int main() {
+    char str[50];
+    scanf("%s",str);
+    printf("%s",str);
+
+    return 0;
+}
+2.length of string
+#include <stdio.h>
+#include <string.h>
+int main() {
+    // Write C code here
+    char arr[30];
+    fgets(arr,sizeof(arr),stdin);
+    puts(arr);
+    int len=strlen(arr);
+    printf("%d",len-1);
+
+    return 0;
+}
+or
+.// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+int main() {
+    // Write C code here
+    char arr[30];
+    fgets(arr,sizeof(arr),stdin);
+    puts(arr);
+    int index=0;
+    while(arr[index]!='\0')
+    index++;
+    printf("%d",index-1);
+    return 0;
+}
+3.alphabets,digits,special character
+#include <stdio.h>
+#include<string.h>
+int main() {
+    char str[50];
+    fgets(str,sizeof(str),stdin);
+    puts(str);
+    int index=0,alpha=0,digit=0,special=0;
+    while (str[index]!='\0')
+    {
+        if((str[index]>='a'&&str[index]<='z')||(str[index]>='A'&&str[index]<='Z'))
+        alpha++;
+    else if (str[index]>='0'&&str[index]<='9')
+     digit++;
+     else
+        special++;
+        index++;
+    }
+    printf("%d %d %d",alpha,digit,special-1);
+    return 0;
+}
+4.vowels
+#include <stdio.h>
+#include<string.h>
+int main() {
+    char str[50];
+    fgets(str,sizeof(str),stdin);
+    puts(str);
+    int index=0,vowels=0,cons=0;
+    while (str[index]!='\0')
+    {
+        if(str[index]=='a'||str[index]=='e'||str[index]=='i'||str[index]=='o'||str[index]=='u'||str[index]=='A'||str[index]=='E'||str[index]=='I'||str[index]=='O'||str[index]=='U')
+        vowels++;
+     else
+        cons++;
+        index++;
+    }
+    printf("%d %d",vowels,cons-1);
+    return 0;
+}
+5.uppercase
+#include <stdio.h>
+#include <string.h>
+int main() {
+    // Write C code here
+    char str[30];
+    fgets(str,sizeof(str),stdin);
+    puts(str);
+    int index=0;
+    while(str[index]!='\0')
+    {
+                if(str[index]>='a'&&str[index]<='z')
+                str[index]=str[index]-32;
+
+    index++;
+    }
+    printf("%s",str);
+    return 0;
+}
+6.lowercase
+#include <stdio.h>
+#include <string.h>
+int main() {
+    // Write C code here
+    char str[30];
+    fgets(str,sizeof(str),stdin);
+    puts(str);
+    int index=0;
+    while(str[index]!='\0')
+    {
+               
+             if(str[index]>='A'&&str[index]<='Z')
+                str[index]=str[index]+32;
+    index++;
+    }
+    printf("%s",str);
+    return 0;
+}
+7.toggle
+#include <stdio.h>
+#include <string.h>
+int main() {
+    // Write C code here
+    char str[30];
+    fgets(str,sizeof(str),stdin);
+    puts(str);
+    int index=0;
+    while(str[index]!='\0')
+    {
+                if(str[index]>='a'&&str[index]<='z')
+                str[index]=str[index]-32;
+                else if(str[index]>='A'&&str[index]<='Z')
+                str[index]=str[index]+32;
+    index++;
+    }
+    printf("%s",str);
+    return 0;
+}
+8.count tthe total number of words
+#include <stdio.h>
+#include <string.h>
+int main() {
+    // Write C code here
+    char str[30];
+    fgets(str,sizeof(str),stdin);
+    puts(str);
+    int index=0;
+    while(str[index]!='\0')
+    {
+    index++;
+    }
+    printf("%d",index-1);
+    return 0;
+or
+count of words
+#include <stdio.h>
+
+int main() {
+  char str[30];
+    fgets(str,sizeof(str),stdin);
+    puts(str);
+    int index=0,countofwords=0;
+    while(str[index]!='\0')
+    {
+        if(str[index]==' '||str[index]=='\t'||str[index]=='\n')
+        countofwords++;
+        index++;
+    }
+    printf("%d",countofwords);
+    return 0;
+}
+9.separate the character from the string
+#include <stdio.h>
+#include <string.h>
+int main() {
+    // Write C code here
+    char str[30];
+    fgets(str,sizeof(str),stdin);
+    puts(str);
+    int index=0;
+    while(str[index]!='\0')
+    {
+    printf("%c ",str[index]);
+    index++;
+    }
+    return 0;
+}
+10.print the individual character in reverse order
+#include <stdio.h>
+#include <string.h>
+int main() {
+    // Write C code here
+    char str[30];
+    fgets(str,sizeof(str),stdin);
+    puts(str);
+    int index=0;
+    while(str[index]!='\0')
+    index++;
+    for(int i=index-2;i>=0;i--)
+    {    
+    printf("%c ",str[i]);
+
+    }
+    return 0;
+}
+sandclock sum;
+#include<stdio.h>
+    int main() {
+    int r,c;
+    scanf("%d %d",&r,&c);
+    int arr[r][c];
+    for(int i=0;i<r;i++)
+    {
+    for(int j=0;j<c;j++)
+       {
+           scanf("%d",&arr[i][j]);
+       }
+    }
+    //int limit=(r-2)*(c-2);
+    int max=0,sum=0;
+    for(int i=0;i<r-2;i++)
+    {
+    for(int j=0;j<c-2;j++)
+       {
+      sum=arr[i][j]+arr[i][j+1]+arr[i][j+2]+arr[i+1][j+1]+arr[i+2][j]+arr[i+2][j+1]+arr[i+2][j+2];
+       }
+       if(max<sum)
+       {
+       max=sum;
+       }
+    }
+    printf("%d",max);
+    return 0;
+    }
