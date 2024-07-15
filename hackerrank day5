@@ -1,0 +1,14 @@
+1.find given character is uppercase or lowercase 
+  #include <stdio.h>    
+  #include <ctype.h>
+    int main() {
+    char c;
+    scanf("%c",&c);
+        if((c>='a')&&(c<='z'))
+            printf("%c is lowercase letter",c);
+        else if((c>='A')&&(c<='Z'))
+            printf("%c is uppercase letter",c);
+    
+    return 0;
+
+}
