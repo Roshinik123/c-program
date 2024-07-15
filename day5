@@ -19,24 +19,74 @@ int main() {
     return 0;
 
 }
-2.
-  #include <stdio.h>
-int main() {
-    char str[]="ashu";
+2.toupper
+  #include <stdio.h>    
+  #include <ctype.h>
+    int main() {
+    char str[50];
     char alpha[123]={0};
     int index=0;
+    fgets(str,sizeof(str),stdin);
     while(str[index]!='\0')
     {
-        alpha[str[index]]++;
+        alpha[toupper (str[index])-58]++;
         index++;
     }
-    for(index=0;index<123;index++)
+    for(index=0;index<26;index++)
     {
         if(alpha[index]!=0)
         {
-            printf("%c-->%d",index,alpha[index]);
+            printf("%c-->%d",index+58,alpha[index]);
         }
     }
     return 0;
 
 }
+3.tolower
+  #include <stdio.h>    
+  #include <ctype.h>
+    int main() {
+    char str[50];
+    char alpha[26]={0};
+    int index=0;
+    fgets(str,sizeof(str),stdin);
+    while(str[index]!='\0')
+    {
+        alpha[tolower(str[index])-97]++;
+        index++;
+    }
+    for(index=0;index<26;index++)
+    {
+        if(alpha[index]!=0)
+        {
+            printf("%c-->%d",index+97,alpha[index]);
+        }
+    }
+    return 0;
+
+}
+4.sort the character without repeatation  
+  #include <stdio.h>    
+  #include <ctype.h>
+    int main() {
+    char str[50];
+    char alpha[26]={0};
+    int index=0;
+    fgets(str,sizeof(str),stdin);
+    while(str[index]!='\0')
+    {
+        alpha[str[index]-97]++;
+        index++;
+    }
+    for(index=0;index<26;index++)
+    {
+        if(alpha[index]!=0)
+        {
+            printf("%c",index+97,alpha[index]);
+        }
+    }
+    return 0;
+
+}
+
+
