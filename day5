@@ -19,3 +19,24 @@ int main() {
     return 0;
 
 }
+2.
+  #include <stdio.h>
+int main() {
+    char str[]="ashu";
+    char alpha[123]={0};
+    int index=0;
+    while(str[index]!='\0')
+    {
+        alpha[str[index]]++;
+        index++;
+    }
+    for(index=0;index<123;index++)
+    {
+        if(alpha[index]!=0)
+        {
+            printf("%c-->%d",index,alpha[index]);
+        }
+    }
+    return 0;
+
+}
