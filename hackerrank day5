@@ -12,3 +12,25 @@
     return 0;
 
 }
+2.give the character and string find the repeated charcter count
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    char ch;
+    scanf("%c",&ch);
+    char str[50];
+    fgets(str,sizeof(str),stdin);
+    int l=strlen(str),count=0;
+    for(int i=0;i<l-1;i++)
+    {
+        if(ch==str[i])
+            count++;
+    }
+    printf("%d",count);
+    return 0;
+}
