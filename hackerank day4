@@ -1,4 +1,4 @@
-1.
+1.Find the Each row sum value individually and find maximum sum value
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
@@ -78,4 +78,103 @@ int main() {
 
     return 0;
 
+}
+3.single integer array size N. N number of array values
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    int n,temp;
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+      for(int i=0;i<n;i++)
+    {
+        for(int j=i+1;j<n;j++)
+        {
+            if(arr[j]<arr[i])
+            {
+            temp=arr[j];
+            arr[j]=arr[i];
+            arr[i]=temp;
+            }
+        }
+    }
+    for(int i=0;i<n;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    return 0;
+}
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    int n,temp;
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+      for(int i=0;i<n;i++)
+    {
+        for(int j=i+1;j<n;j++)
+        {
+            if(arr[j]<arr[i])
+            {
+            temp=arr[j];
+            arr[j]=arr[i];
+            arr[i]=temp;
+            }
+        }
+    }
+    for(int i=0;i<n;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    int n,temp;
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+      for(int i=0;i<n;i++)
+    {
+        for(int j=i+1;j<n;j++)
+        {
+            if(arr[j]<arr[i])
+            {
+            temp=arr[j];
+            arr[j]=arr[i];
+            arr[i]=temp;
+            }
+        }
+    }
+    for(int i=0;i<n;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    return 0;
 }
