@@ -63,28 +63,33 @@ int main() {
 
 }
 4.repeated elements in sorted array
-#include <stdio.h>
-
+#include<stdio.h>
 int main() {
-    // Write C code here
-   int n,search;
-   scanf("%d",&n);
-   
-   int arr[n];
-   for(int i=0;i<n;i++)
-   {
-       scanf("%d",&arr[i]);
-  }
-  
-   for(int i=0;i<n;i++)
-   {
-       if(arr[i]==arr[i+1])
-       {
-           printf("%d",arr[i]);
-       }
-}
-return 0;}
-5. print the search element index
+    int n;
+    //size of array
+    scanf("%d",&n);
+    //array initialization
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+      for(int i=0;i<n-1;i++)
+    {
+        if(arr[i]==arr[i+1]){
+            printf("%d",arr[i]);
+        for(int j=i+1;j<n;j++)
+        {
+            if(arr[j]==arr[j+1])
+            i++;
+            else
+            break;
+        }
+        }
+    }
+ 
+    return 0;
+}5. print the search element index
 #include <stdio.h>
 
 int main() {
